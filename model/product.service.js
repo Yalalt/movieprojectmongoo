@@ -1,7 +1,7 @@
-import "../config/mongoose.js";
+import "../config/database.js";
 
 
 export const getProductsService = async () => {
-    const result = await pool.query();
-    return result;
+    // const result = await 
+    // return result;
 }

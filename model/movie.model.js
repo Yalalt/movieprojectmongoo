@@ -3,7 +3,7 @@ import mongoose, { Model, Schema } from "mongoose";
 
 // scheme
 // Collection movies
-let movieSchema = new Schema({
+const movieSchema = new Schema({
     _id: mongoose.Schema.Types.ObjectId,
     awards: {
         nominations: Number,
@@ -57,4 +57,4 @@ let movieSchema = new Schema({
     collection: 'movies'
 });
 
-export const MovieModel = mongoose.model("Movie", movieSchema, "movies");
+export const MovieModel = mongoose.model("moviemodel", movieSchema, "movies");

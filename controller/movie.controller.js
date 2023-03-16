@@ -6,12 +6,13 @@ import {
   
   
   export const getMovies = async (req, res) => {
-    const movieDataModel = new movieModel(req.body);
+    const movieDataModel = new movieModel();
 
     try {
-      const result = await movieDataModel.get();
+      const result = await movieDataModel.find();
+      console.log(result);
 
-      res.json({ status: true, movieDataModel });
+      // res.json({ status: true, movieDataModel });
     } catch (error) {
       console.log(error);
       res.json({ status: false, message: error });
@@ -24,7 +25,7 @@ import {
     const movieDataModel = new movieModel(req.body);
 
     try {
-      const result = await movieDataModel.save();
+      const result = await movieDataModel.insertOne({});
       
 
       res.json({ status: true, movieDataModel });

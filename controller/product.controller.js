@@ -11,3 +11,22 @@ export const getProducts = async (req, res) => {
     res.json({ status: false, message: error });
   }
 };
+export const getProduct = async (req, res) => {
+  try {
+    // const result = await getProductsService();
+    res.json({ status: true, message: "Successfull Database request send" });
+  } catch (error) {
+    console.log(error);
+    res.json({ status: false, message: error });
+  }
+};
+
+export const createProduct = async (req, res) => {
+  try {
+    // const result = await getProductsService();
+    res.json({ status: true, message: "Successfull Database request send" });
+  } catch (error) {
+    console.log(error);
+    res.json({ status: false, message: error });
+  }
+};
