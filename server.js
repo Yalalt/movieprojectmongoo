@@ -1,16 +1,15 @@
 import express from "express";
 import cors from "cors";
+import bodyParser from "body-parser";
 import productRoutes from "./routes/product.routes.js";
 import movieRoutes from "./routes/movie.routes.js";
 import db from "./config/database.js";
 
-const PORT = 3008;
+const PORT = 9000;
 const app = express();
 
 app.use(cors());
-// app.use(bodyParser.urlencoded({ extended: true }));
-app.use(express.json());
-
+app.use(bodyParser.json());
 app.use("/api", productRoutes);
 app.use("/api", movieRoutes);
 

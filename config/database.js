@@ -1,5 +1,6 @@
 import mongoose from "mongoose";
 
+
 const db = mongoose.connect(
   "mongodb+srv://aqua2022yalaltgandush:t7Zg4gQrdwhd75BG@cluster0.uqiga9k.mongodb.net/sample_mflix?retryWrites=true&w=majority",
   {
